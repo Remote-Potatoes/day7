@@ -101,6 +101,10 @@ button:active {
     transform: translateX(-100vw);
   }
 
+  80% {
+    transform: translateX(90vw);
+  }
+
   100% {
     background: yellow;
   }
