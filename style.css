@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  font-size: 5rem;
+}
+
+.left {
+  width: 50%;
+  color: white;
+  background: blue;
+  margin: 50px;
+  /* padding: 50px; */
+  border: 3px solid red;
+  transition: all 0.5s ease-in;
+  animation-name: warningMayCauseEpiliptic;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+a:visited {
+  color: green;
+}
+
+.left:hover {
+  background-color: orange;
+  transform: translateY(50px);
+}
+
+.left:active {
+  transform: skew(15deg);
+}
+
+button {
+  border: none;
+  background-color: lightblue;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+button:active {
+  transform: translate3d(-20px) rotate(-5deg);
+}
+
+/* pseudo !==  !sudo */
+
+.circle {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: maroon;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-name: jumping;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes jumping {
+  /* from {
+    background-color: maroon;
+  }
+  to {
+    background-color: green;
+  } */
+  0% {
+    background-color: maroon;
+    width: 100px;
+  }
+  20% {
+    background-color: yellow;
+    width: 20px;
+    transform: translateY(80px);
+  }
+  100% {
+    background-color: green;
+    width: 50px;
+  }
+}
+
+@keyframes warningMayCauseEpiliptic {
+  0% {
+    background: blue;
+    transform: rotate(1260deg);
+  }
+
+  40% {
+    transform: translateX(30vw);
+  }
+
+  70% {
+    transform: translateX(-100vw);
+  }
+
+  100% {
+    background: yellow;
+  }
+}
